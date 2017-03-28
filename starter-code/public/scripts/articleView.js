@@ -1,6 +1,6 @@
 'use strict';
 
-// TODO: Wrap the entire contents of this file in an IIFE.
+// DONE: Wrap the entire contents of this file in an IIFE.
 // Pass in to the IIFE a module, upon which objects can be attached for later access.
 (function(module) {
   var articleView = {};
@@ -113,6 +113,7 @@
     // REVIEW: We use `forEach` here because we are relying on the side-effects of the callback function:
     // appending to the DOM.
     // The callback is not required to return anything.
+    Article.numWordsAll();
     Article.numWordsByAuthor().forEach(stat => $('.author-stats').append(template(stat)));
 
     // REVIEW: Simply write the correct values to the page:

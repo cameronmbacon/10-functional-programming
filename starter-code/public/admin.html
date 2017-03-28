@@ -12,11 +12,7 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
     <script type="text/javascript" id="analytics-template">
-      <li data-author="{{author}}"><strong>{{author}}</strong>: </li>
-      <li data-author="{{author}}"><strong>{{author}}</strong>: </li>
-      <li data-author="{{author}}"><strong>{{author}}</strong>: </li>
-      <li data-author="{{author}}"><strong>{{author}}</strong>: </li>
-      <li data-author="{{author}}"><strong>{{author}}</strong>: </li>
+      <li data-author="{{author}}"><strong>{{name}}</strong>: {{totalWordsByAuthor}} words written</li>
     </script>
   </head>
   <body>
@@ -57,9 +53,9 @@
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // TODO: After we fetch and load all the articles, what view function do we want to run next?
+      // DONE: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
-      Article.fetchAll(articleView.initAdminPage());
+      Article.fetchAll(articleView.initAdminPage);
     </script>
   </body>
 </html>
